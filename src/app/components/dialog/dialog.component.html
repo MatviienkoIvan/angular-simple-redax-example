@@ -1,0 +1,19 @@
+<h2 mat-dialog-title>{{data.title}}</h2>
+<mat-dialog-content>
+  <form [formGroup]="editForm" class="edit-form">
+    <section class="edit-form-content">
+      <mat-form-field *ngFor="let field of fieldsData; trackBy: fieldsTrackBy" class="edit-form-content-field">
+        <mat-label>{{field.title}}</mat-label>
+        <input matInput [formControlName]="field.name" />
+      </mat-form-field>
+    </section>
+    <section class="edit-form-content-error">
+      <mat-error *ngIf="(editForm.touched && editForm.invalid)">Next form control(s) is(are) not required:{{invalidControlNames}}</mat-error>
+    </section>
+  </form>
+</mat-dialog-content>
+  
+<mat-dialog-actions class="edit-form-buttons">
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button [disabled]="editForm.invalid" mat-button (click)="onSave()" cdkFocusInitial>Save</button>
+</mat-dialog-actions>
