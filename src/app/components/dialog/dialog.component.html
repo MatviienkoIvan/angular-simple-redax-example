@@ -8,7 +8,7 @@
       </mat-form-field>
     </section>
     <section class="edit-form-content-error">
-      <mat-error *ngIf="(editForm.touched && editForm.invalid)">Next form control(s) is(are) not required:{{invalidControlNames}}</mat-error>
+      <mat-error *ngIf="(editForm.touched && editForm.invalid)">Next form control(s) is(are) required:{{invalidControlNames}}</mat-error>
     </section>
   </form>
 </mat-dialog-content>
