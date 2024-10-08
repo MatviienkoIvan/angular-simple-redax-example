@@ -80,7 +80,7 @@ export class DialogComponent implements OnInit {
 
   ngOnInit(): void {
     this.editForm = this._fb.group({
-      number: [this.data.contextData.number, Validators.required],
+      number: [{ value: this.data.contextData.number, disabled: true }, Validators.required],
       name: [this.data.contextData.name, Validators.required],
       weight: [this.data.contextData.weight, Validators.required],
       symbol: [this.data.contextData.symbol, Validators.required],

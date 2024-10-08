@@ -6,7 +6,7 @@
     <div>Ooops... something went wrong</div>
   </ng-container>
   
-  <ng-container *ngIf="dataSource.elementsData">
+  <ng-container *ngIf="dataSource.periodicElements">
     <main class="example-container mat-elevation-z8" tabindex="0">
       <main class="example-container-header">
         <mat-form-field>
@@ -18,7 +18,7 @@
         </button>
       </main>
   
-      <table mat-table [dataSource]="dataSource.elementsData">
+      <table mat-table [dataSource]="dataSource.periodicElements">
         <ng-container *ngFor="let header of displayedColumnsHeaderData;  trackBy: fieldsTrackBy">
           <ng-container [matColumnDef]="header.name">
             <th mat-header-cell *matHeaderCellDef> {{header.title}} </th>

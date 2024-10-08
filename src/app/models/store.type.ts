@@ -4,6 +4,5 @@ export type PeriodicElementsStore = {
   periodicElements: PeriodicElements,
   loading: boolean,
   error: boolean,
-  searchField: string,
-  editForm: boolean
+  searchText: string,
 }

@@ -10,6 +10,7 @@
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+    "useDefineForClassFields": false,
     "skipLibCheck": true,
     "isolatedModules": true,
     "esModuleInterop": true,
@@ -27,7 +28,11 @@
     "paths": {
       "@components/*": ["app/components/*"],
       "@services/*": ["app/services/*"],
-      "@models/*": ["app/models/*"]
+      "@models/*": ["app/models/*"],
+      "@state/reducers/*": ["app/state/redusers/*"],
+      "@state/actions/*": ["app/state/actions/*"],
+      "@state/effects/*": ["app/state/effects/*"],
+      "@state/*": ["app/state/*"]
     }
   },
   "angularCompilerOptions": {
