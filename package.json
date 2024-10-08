@@ -1,5 +1,5 @@
 {
-  "name": "interview-test-app",
+  "name": "redux-simple-app",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
